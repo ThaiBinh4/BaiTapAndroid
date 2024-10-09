@@ -9,7 +9,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Tap 1"
+        android:text="ĐỖ THÁI BÌNH \n22115053122304 \n LỚP 22T3\"
         android:textSize="30dp"/>
 
 </FrameLayout>

@@ -33,10 +33,10 @@ public class HomeViewPagerAdapter extends FragmentStatePagerAdapter {
     @Override
     public CharSequence getPageTitle(int position) {
         switch (position){
-            case 0: return "Tap 1";
-            case 1: return "Tap 2";
-            case 2: return "Tap 3";
-            default: return "Tap 1";
+            case 0: return "Giới thiệu";
+            case 1: return "Điểm";
+            case 2: return "Ngành";
+            default: return "Giới thiệu";
 
         }
     }
