@@ -14,8 +14,9 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
     private ImageView v1,v2,v3,v4,v5,v6;
-    private TextView txtdiem;
+    private TextView txtdiem,inf;
     private int diemso;
+    private String tt;
     SharedPreferences sharedPreferences;
 
     @Override
@@ -30,8 +31,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
         sharedPreferences= getSharedPreferences("diem", MODE_PRIVATE);
-        diemso = sharedPreferences.getInt("diemso", 0); // Lấy giá trị "diemso" từ SharedPreferences
 
+        diemso = sharedPreferences.getInt("diemso", 0); // Lấy giá trị "diemso" từ SharedPreferences
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("infor", "Đỗ Thái Bình msgitv 22115053122304");
+        editor.commit();
         // Khởi tạo các nút và TextView
         v1 = findViewById(R.id.v1);
         v2 = findViewById(R.id.v2);
@@ -39,6 +43,10 @@ public class MainActivity extends AppCompatActivity {
         v4 = findViewById(R.id.v4);
         v5 = findViewById(R.id.v5);
         v6 = findViewById(R.id.v6);
+        inf = findViewById(R.id.info);
+
+        tt=sharedPreferences.getString("infor", "");
+        inf.setText(tt);
         txtdiem = findViewById(R.id.diem);
 
         // Hiển thị điểm hiện tại khi khởi động

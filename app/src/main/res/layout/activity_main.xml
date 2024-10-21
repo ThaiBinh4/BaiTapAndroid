@@ -20,11 +20,11 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Đỗ Thái Bình msv: 22115053122304"
+        android:text="...."
         android:textSize="25dp"
         android:textColor="#1976D2"
         app:layout_constraintEnd_toEndOf="parent"
