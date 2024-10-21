@@ -13,7 +13,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
-    private ImageView v1,v2,v3,v4,v5;
+    private ImageView v1,v2,v3,v4,v5,v6;
     private TextView txtdiem;
     private int diemso;
     SharedPreferences sharedPreferences;
@@ -38,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         v3 = findViewById(R.id.v3);
         v4 = findViewById(R.id.v4);
         v5 = findViewById(R.id.v5);
+        v6 = findViewById(R.id.v6);
         txtdiem = findViewById(R.id.diem);
 
         // Hiển thị điểm hiện tại khi khởi động
@@ -55,11 +56,11 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        // Áp dụng sự kiện click cho các nút
         v1.setOnClickListener(listener);
         v2.setOnClickListener(listener);
         v3.setOnClickListener(listener);
         v4.setOnClickListener(listener);
         v5.setOnClickListener(listener);
+        v6.setOnClickListener(listener);
     }
 }
