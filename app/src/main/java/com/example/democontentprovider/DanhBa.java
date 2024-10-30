@@ -1,10 +1,13 @@
 package com.example.democontentprovider;
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import androidx.activity.EdgeToEdge;
@@ -23,6 +26,7 @@ public class DanhBa extends AppCompatActivity {
     ListView lvDanhBa;
     ArrayList<Contact> dsDanhBa;
     ArrayAdapter<Contact> adapterDanhBa;
+    ImageView bk;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +36,15 @@ public class DanhBa extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+        bk=findViewById(R.id.back);
+        bk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(DanhBa.this,MainActivity.class);
+                //intent.setClassName("com.example.democontentprovider","com.example.democontentprovider.Danhba");
+                startActivity(intent);
+            }
         });
         addControls();
         showAllContactFromDevice();
