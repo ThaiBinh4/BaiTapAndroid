@@ -15,20 +15,40 @@
 <!--        android:text="Home Fragment"-->
 <!--        android:textSize="30dp"-->
 <!--        android:layout_gravity="center"/>-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="#06AEDC"
+>
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/taplayout"
-        android:layout_width="match_parent"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="68dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:src="@drawable/back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#18B6FF"
-        app:tabIndicatorColor="@color/white"
-        app:tabSelectedTextColor="@color/white">
+        android:layout_marginTop="28dp"
+        android:text="Danh sách sản phẩm"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.601"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-    </com.google.android.material.tabs.TabLayout>
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 
 
 </LinearLayout>

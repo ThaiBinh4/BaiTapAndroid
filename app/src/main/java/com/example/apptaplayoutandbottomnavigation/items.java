@@ -4,6 +4,15 @@ public class items {
     private String ten;
     private String tieude;
     private String anh;
+    private boolean mua;
+
+    public boolean isMua() {
+        return mua;
+    }
+
+    public void setMua(boolean mua) {
+        this.mua = mua;
+    }
 
     public String getTen() {
         return ten;
@@ -27,5 +36,15 @@ public class items {
 
     public void setAnh(String anh) {
         this.anh = anh;
+    }
+
+    public items() {
+    }
+
+    public items(String ten, String tieude, String anh, boolean mua) {
+        this.ten = ten;
+        this.tieude = tieude;
+        this.anh = anh;
+        this.mua = mua;
     }
 }

@@ -18,6 +18,7 @@ import android.widget.TableLayout;
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -77,20 +78,25 @@ public class HomeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        ListView listView;
+        listAdapter itemAdapter;
+        List<items> itlist;
         // Inflate the layout for this fragment
-        String[] items = {"Item 1", "Item 2", "Item 3", "Item 4"};
-        ListView lvListView;
-        View view=inflater.inflate(R.layout.fragment_home, container, false);
-        lvListView = view.findViewById(R.id.listView);
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(  this,R.layout.simple_list_item_1,items        );
+        mView = inflater.inflate(R.layout.fragment_home, container, false);
+        listView = mView.findViewById(R.id.listView);
+        itlist = new ArrayList<>();
+        itlist.add(new items("Ram kingdom 3", "Loại ram hiện đại mạnh mẽ ddr3 máy văn phòng", "ram.png",true));
+        itlist.add(new items("Ram kingdom", "Loại ram hiện đại mạnh mẽ ddr4 hiệu suất vượt trội", "ram.png",true));
+        itlist.add(new items("Chuột logitech k2", "chuột với phím bấm nhẹ nhàng ban khuya cho cảm giác tuyệt vời", "chuot.png",true));
+        itlist.add(new items("Chuột logitech r3", "chuột hiện đại cảm giác tuyệt vời", "chuot.png",true));
+        itlist.add(new items("Chuột logitech k5", "chuột chơi game tiếng click mượt mà", "chuot.png",true));
+        itlist.add(new items("Chuột logitech l1", "chuột văn phòng nhẹ nhàng cho nữ", "chuot.png",true));
+        itlist.add(new items("Chuột logitech h5", "chuột chuột gaming loại xịn bluetooth", "chuot.png",true));
+        itlist.add(new items("Chuột logitech a1", "chuột có dây giá rẻ cho sinh viên", "chuot.png",true));
 
-        // Đặt Adapter cho ListView
-        lvListView.setAdapter(adapter);
+        itemAdapter = new listAdapter(getContext(), itlist);
 
-
-
-
-
+        listView.setAdapter(itemAdapter);
         return mView;
     }
 }
