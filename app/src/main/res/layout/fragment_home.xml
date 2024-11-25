@@ -15,44 +15,20 @@
 <!--        android:text="Home Fragment"-->
 <!--        android:textSize="30dp"-->
 <!--        android:layout_gravity="center"/>-->
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/taplayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#18B6FF"
-            app:tabIndicatorColor="@color/white"
-            app:tabSelectedTextColor="@color/white"
-            >
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tap1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Giới thiệu">
 
-            </com.google.android.material.tabs.TabItem>
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tap2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Điểm">
-
-            </com.google.android.material.tabs.TabItem>
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tap3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Ngành">
-
-            </com.google.android.material.tabs.TabItem>
-
-
-        </com.google.android.material.tabs.TabLayout>
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/home_viewpager"
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/taplayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:background="#18B6FF"
+        app:tabIndicatorColor="@color/white"
+        app:tabSelectedTextColor="@color/white">
 
-    </androidx.viewpager.widget.ViewPager>
+    </com.google.android.material.tabs.TabLayout>
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 
 </LinearLayout>

@@ -10,11 +10,14 @@ import androidx.viewpager.widget.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
+import android.widget.ListView;
 import android.widget.TableLayout;
 
-import com.example.apptaplayoutandbottomnavigation.homeTabLayout.HomeViewPagerAdapter;
 import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -75,13 +78,19 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        mView= inflater.inflate(R.layout.fragment_home, container, false);
-        tabLayout=mView.findViewById(R.id.taplayout);
-        viewPager=mView.findViewById(R.id.home_viewpager);
+        String[] items = {"Item 1", "Item 2", "Item 3", "Item 4"};
+        ListView lvListView;
+        View view=inflater.inflate(R.layout.fragment_home, container, false);
+        lvListView = view.findViewById(R.id.listView);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(  this,R.layout.simple_list_item_1,items        );
 
-        HomeViewPagerAdapter adapter= new HomeViewPagerAdapter(getChildFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
-        viewPager.setAdapter(adapter);
-        tabLayout.setupWithViewPager(viewPager);
+        // Đặt Adapter cho ListView
+        lvListView.setAdapter(adapter);
+
+
+
+
+
         return mView;
     }
 }
